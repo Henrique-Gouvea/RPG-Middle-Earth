@@ -2,6 +2,7 @@
   "conventionalCommits.scopes": [
     "Races",
     "Energy",
-    "Archetypes"
+    "Archetypes",
+    "Fighter"
   ]
 }
