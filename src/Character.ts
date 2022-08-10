@@ -53,7 +53,7 @@ export default class Character implements Fighter {
   }
 
   special(enemy:Fighter):void {
-    console.log(`resre${this._strength + enemy.defense}`);
+    console.log(`resre${this._strength + enemy.strength}`);
   }
 
   levelUp():void {

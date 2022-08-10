@@ -5,6 +5,7 @@
     "Archetypes",
     "Fighter",
     "Character",
-    "Monster"
+    "Monster",
+    "Battle"
   ]
 }
