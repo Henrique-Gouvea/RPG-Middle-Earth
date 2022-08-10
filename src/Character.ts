@@ -2,6 +2,7 @@ import Archetype, { Mage } from './Archetypes';
 import Energy from './Energy';
 import Fighter from './Fighter';
 import Race, { Elf } from './Races';
+import utils from './utils';
 
 const generateAleatoryNumber1to10 = () => Math.floor(Math.random() * 10 + 1);
 
@@ -72,14 +73,16 @@ export default class Character implements Fighter {
 
   receiveDamage(attackPoints:number):number {
     const damage = attackPoints - this._defense;
-    if (damage > 0) {
-      const newLife = this._lifePoints - damage;
-      if (newLife <= 0) {
-        this._lifePoints = -1;
-        return -1;
-      } 
-      this._lifePoints = newLife;
-      return newLife;
-    } return this._lifePoints;
+    this._lifePoints = utils.damageLogic(damage, this._lifePoints);
+    return this.lifePoints;
+    // if (damage > 0) {
+    //   const newLife = this._lifePoints - damage;
+    //   if (newLife <= 0) {
+    //     this._lifePoints = -1;
+    //     return -1;
+    //   } 
+    //   this._lifePoints = newLife;
+    //   return newLife;
+    // } return this._lifePoints;
   }
 }

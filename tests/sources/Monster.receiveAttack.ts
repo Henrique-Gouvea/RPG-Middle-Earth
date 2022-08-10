@@ -15,6 +15,7 @@ const result = () => {
       if (previousLife <= 0) break;
       character.attack(monster);
       res = character.strength > previousLife ? monster.lifePoints <= 0 : monster.lifePoints <= previousLife && (monster.lifePoints >= previousLife - (character.strength) || monster.lifePoints == -1);
+      console.log(monster);
       if (!res) return false;
     }
   }
