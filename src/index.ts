@@ -1,3 +1,4 @@
+import { Mage } from './Archetypes';
 import Battle, { PVE, PVP } from './Battle';
 import Character from './Character';
 import Dragon from './Dragon';
@@ -12,22 +13,36 @@ player1.levelUp();
 player1.levelUp();
 player1.levelUp();
 player1.levelUp();
+player1.levelUp();
+player1.levelUp();
+player1.levelUp();
+player1.levelUp();
+player1.levelUp();
+player1.levelUp();
+player1.levelUp();
+player1.levelUp();
+player1.levelUp();
+player1.levelUp();
+player1.levelUp();
+player1.levelUp();
+player1.levelUp();
+player1.levelUp();
+player1.levelUp();
+player1.levelUp();
 
 const monster1 = new Monster();
 const monster2 = new Dragon();
-
-console.log(player1);
-console.log(player2);
 
 const pvp = new PVP(player1, player2);
 
 const pve = new PVE(player1, [monster1, monster2]);
 
-const runBattles = (battles:Battle[]) => {
+const runBattles = (battles:Battle[]) => {  
   battles.forEach((battle:Battle) => {
     battle.fight();
-    console.log(battle);
   });
 };
+
+console.log(Mage._createdArchetypeInstances);
 
 export { player1, player2, player3, monster1, monster2, pvp, pve, runBattles };
