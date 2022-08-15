@@ -18,8 +18,6 @@ Clonar o repositório
 
 Executar o comando npm install
 
-Criar um arquivo .env na raiz do projeto(passar as variaveis de ambiente especificadas em .env.example)
-
 Executar o comando npm start(Já ira transpilar e executar o que esta no index.ts)
 
 
